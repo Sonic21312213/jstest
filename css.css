@@ -1,15 +1,33 @@
 body {
-    background-color: black;
-    display: flex;
-    align-items: center;
+    margin: 0; /* Remove default body margin */
+    height: 100vh; /* Full height */
+    display: flex; /* Center the button */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    transition: background-color 0.1s; /* Smooth background transition */
 }
 
-h1 {
-    color: white;
-    align-items: center;
+.testbut {
+    padding: 20px 40px; /* Add some padding */
+    font-size: 20px; /* Increase font size */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.2s, color 0.2s;
 }
 
-button {
-    border-radius: 10px;
-    align-items:center;
+.flash {
+    animation: flash-animation 0.1s infinite;
+}
+
+@keyframes flash-animation {
+    0%, 100% { background-color: red; color: white; }
+    25% { background-color: yellow; color: black; }
+    50% { background-color: green; color: white; }
+    75% { background-color: blue; color: white; }
+}
+
+@keyframes background-flash {
+    0%, 100% { background-color: black; }
+    25% { background-color: red; }
+    50% { background-color: yellow; }
+    75% { background-color: green; }
 }
