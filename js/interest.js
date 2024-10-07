@@ -7,9 +7,9 @@ const body = document.body;
 testbut.addEventListener('click', () => {
     // Add the flashing effect to the button
     testbut.classList.add('flash');
-    
+
     // Add the flashing background effect
-    body.classList.add('background-flash');
+    body.style.animation = 'background-flash 0.5s infinite';
 
     // Go fullscreen
     if (document.documentElement.requestFullscreen) {
@@ -23,7 +23,7 @@ testbut.addEventListener('click', () => {
         // Stop the flashing effect after a few seconds
         setTimeout(() => {
             testbut.classList.remove('flash');
-            body.classList.remove('background-flash'); // Remove background flash
+            body.style.animation = ''; // Remove background flash
         }, 2000); // Flashing lasts for 2 seconds
     }, 500);
 });

@@ -4,7 +4,6 @@ body {
     display: flex; /* Center the button */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    transition: background-color 0.1s; /* Smooth background transition */
 }
 
 .testbut {
@@ -14,6 +13,7 @@ body {
     transition: background-color 0.2s, color 0.2s;
 }
 
+/* Flashing button */
 .flash {
     animation: flash-animation 0.1s infinite;
 }
@@ -25,9 +25,8 @@ body {
     75% { background-color: blue; color: white; }
 }
 
+/* Flashing effect for the background */
 @keyframes background-flash {
-    0%, 100% { background-color: black; }
-    25% { background-color: red; }
-    50% { background-color: yellow; }
-    75% { background-color: green; }
+    0%, 100% { background-color: white; }
+    50% { background-color: black; }
 }
